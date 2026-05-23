@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'screens/login_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -30,8 +32,11 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
+        textTheme: GoogleFonts.poppinsTextTheme(),
+        // Keep ElmSans as fallback via fontFamily where needed
+        fontFamily: 'ElmSans',
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const LoginPage(),
     );
   }
 }
